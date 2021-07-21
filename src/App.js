@@ -5,6 +5,10 @@ import {
   EuiPageBody,
   EuiPageContentBody,
   EuiInMemoryTable,
+  EuiText,
+  EuiPageHeader,
+  EuiSpacer,
+  EuiTextAlign,
 } from '@elastic/eui';
 import { LoremIpsum } from "lorem-ipsum";
 
@@ -55,12 +59,23 @@ function App() {
         <EuiPageBody>
           <EuiPageContent>
             <EuiPageContentBody>
-                <EuiInMemoryTable
-                  items={rows}
-                  columns={columns}
-                  pagination={pagination}
-                  sorting={sorting}
-                />
+              <EuiPageHeader
+                pageTitle="EUI In-Memory Table example"
+                iconType="logoElastic"
+              />
+              <EuiSpacer size="l" />
+              <EuiInMemoryTable
+                items={rows}
+                columns={columns}
+                pagination={pagination}
+                sorting={sorting}
+              />
+              <EuiSpacer size="l" />
+              <EuiText>
+                <EuiTextAlign textAlign="right">
+                  <p><a href="https://github.com/jsanz/eui-inmemory-table-example/blob/main/src/App.js">Source code</a></p>
+                </EuiTextAlign>
+              </EuiText>
             </EuiPageContentBody>
           </EuiPageContent>
         </EuiPageBody>
