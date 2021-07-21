@@ -42,7 +42,8 @@ function App() {
   ];
 
   const pagination = {
-    pageSize: 7,
+    initialPageIndex: 0,
+    initialPageSize: 7,
     pageSizeOptions: [7, 14, 28]
   };
 
